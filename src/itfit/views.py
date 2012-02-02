@@ -2,4 +2,4 @@
 from django.shortcuts import render
 
 def home(request):
-	render('itfit',request)
+	return render(request, 'itfit/index.html')

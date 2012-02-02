@@ -1,0 +1,27 @@
+{
+    "PHP": {
+        "php": '/usr/bin/php',
+        "phpExtraPaths": [],
+        "phpConfigFile": 'php.ini'
+    },
+    "JavaScript": {
+        "javascriptExtraPaths": []
+    },
+    "Perl": {
+        "perl": "/usr/bin/perl",
+        "perlExtraPaths": []
+    },
+    "Ruby": {
+        "ruby": "/usr/bin/ruby",
+        "rubyExtraPaths": []
+    },
+    "Python": {
+        "python": '/usr/bin/python',
+        "pythonExtraPaths": ['/Users/mturilin/Development/it_fitness_site/ENV/lib/python2.7/site-packages',
+        '/Users/mturilin/Development/it_fitness_site/itfitness/src']
+    },
+    "Python3": {
+        "python": '/usr/bin/python3',
+        "pythonExtraPaths": []
+    }
+}

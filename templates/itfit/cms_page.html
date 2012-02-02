@@ -1,0 +1,18 @@
+{% extends "main.html" %}
+{% load cms_tags menu_tags %}
+
+
+{% block header %}
+	{% cms_toolbar %}
+	<ul>
+		{% show_menu %}
+	</ul>
+{% endblock header %}
+
+
+
+{% block container %}
+
+	{% block cms_container %}{% endblock %}
+
+{% endblock %}

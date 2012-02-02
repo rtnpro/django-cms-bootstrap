@@ -1,0 +1,19 @@
+{% load sekizai_tags %}
+
+{% addtoblock 'css' %}
+<link rel="stylesheet/less" href="{{STATIC_URL}}/bootstrap/bootstrap.less">
+<link rel="stylesheet/less" href="{{STATIC_URL}}/less/itfitness.css">
+{% endaddtoblock %}
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">{% render_block 'css' %}</head>
+
+	<body>
+		<header id="header" class=""></header><!-- /header -->
+
+	</body>
+	{% render_block 'js' %}
+</html>

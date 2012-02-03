@@ -7,7 +7,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 PROJECT_PATH = path(__file__).dirname().dirname()
-SITE_PATH = PROJECT_PATH.dirname()
+SITE_PATH = PROJECT_PATH.joinpath('temp')
 
 
 ADMINS = (
@@ -197,8 +197,8 @@ LOGGING = {
 
 
 CMS_TEMPLATES = (
-    ('itfit/index.html', 'Index'),
-    ('itfit/standard.html', 'Standard Page'),
+    ('standard.html', 'Standard Page'),
+    ('index.html', 'Index'),
 )
 
 THUMBNAIL_PROCESSORS = (

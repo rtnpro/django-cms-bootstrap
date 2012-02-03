@@ -1,9 +1,14 @@
 {% load sekizai_tags %}
 
 {% addtoblock 'css' %}
-<link rel="stylesheet/less" href="{{STATIC_URL}}/bootstrap/bootstrap.less">
-<link rel="stylesheet/less" href="{{STATIC_URL}}/less/itfitness.css">
+<link rel="stylesheet/less" href="{{STATIC_URL}}bootstrap/less/bootstrap.less">
+<link rel="stylesheet/less" href="{{STATIC_URL}}less/itfitness.less">
 {% endaddtoblock %}
+
+{% addtoblock 'js' %}
+	<script src="{{STATIC_URL}}js/lib/less-1.2.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+{% endaddtoblock %}		
 
 <!DOCTYPE html>
 <html>

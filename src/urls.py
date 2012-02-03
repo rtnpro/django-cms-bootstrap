@@ -1,5 +1,6 @@
 from django.conf.urls.defaults import patterns, include, url
 from django.conf import settings
+from django.conf.urls.static import static
 
 # Uncomment the next two lines to enable the admin:
 
@@ -17,8 +18,26 @@ urlpatterns = patterns('',
 )
 
 if settings.DEBUG:
-    urlpatterns = patterns('',
-    url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-        {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-    url(r'', include('django.contrib.staticfiles.urls')),
-) + urlpatterns
+    urlpatterns = patterns(
+        '',
+
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+
+        # url(settings.STATIC_URL + r'bootstrap/(?P<path>.*)$', 'django.views.static.serve',
+        #     {'document_root': settings.STATIC_ROOT.joinpath('bootstrap'), 'show_indexes': True}),
+        
+        # static(settings.STATIC_URL + 'less', document_root=settings.STATIC_ROOT.joinpath('less')),
+        # # url(r'^static/less/(?P<path>.*)$', 'django.views.static.serve',
+        # #     {'document_root': settings.STATIC_ROOT.joinpath('less'), 'show_indexes': True}),
+        
+        # url(settings.STATIC_URL + r'js/(?P<path>.*)$', 'django.views.static.serve',
+        #     {'document_root': settings.STATIC_ROOT.joinpath('js'), 'show_indexes': True}),
+        
+        # url(settings.STATIC_URL + r'css/(?P<path>.*)$', 'django.views.static.serve',
+        #     {'document_root': settings.STATIC_ROOT.joinpath('css'), 'show_indexes': True}),
+        
+        url(r'', include('django.contrib.staticfiles.urls')),
+
+    ) + urlpatterns
+    # import pdb; pdb.set_trace()

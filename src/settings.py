@@ -1,8 +1,5 @@
 from path import path;
 
-
-# Django settings for itfitness project.
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
@@ -130,14 +127,17 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # ADMIN
+    'django.contrib.admin',
+    'django.contrib.admindocs',
+
     # CMS
     'sekizai',
-    'itfit',
     'cms',
     'mptt',
     'menus',
     'south',
-    # 'cms.plugins.file',
+
     'cms.plugins.flash',
     'cms.plugins.googlemap',
     'cms.plugins.link',
@@ -155,10 +155,9 @@ INSTALLED_APPS = (
     'cmsplugin_filer_video',
     'easy_thumbnails',
     'reversion',
+
+    # Put your apps here
     
-    # ADMIN
-    'django.contrib.admin',
-    'django.contrib.admindocs',
 )
 
 

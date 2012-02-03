@@ -6,7 +6,19 @@
 {% endaddtoblock %}
 
 {% addtoblock 'js' %}
+
 	<script src="{{STATIC_URL}}js/lib/less-1.2.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<!--  Underscore.js - uncomment if needed
+	<script src="{{STATIC_URL}}js/lib/underscore.js" type="text/javascript" charset="utf-8" async defer></script> -->
+	<!--  Backbone.js - uncomment if needed
+	<script src="{{STATIC_URL}}js/lib/backbone.js" type="text/javascript" charset="utf-8" async defer></script> -->
+
+	<!-- Hogan.js - uncomment if needed
+	<script src="http://twitter.github.com/hogan.js/builds/1.0.3/hogan.js"></script> 
+	-->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript" charset="utf-8" async defer></script>
 
 {% endaddtoblock %}		
 
@@ -16,6 +28,9 @@
 		<meta charset="utf-8">{% render_block 'css' %}</head>
 
 	<body>
+		{% block afterbody %}	
+		{% endblock afterbody %}
+
 		<header id="header" class="">
 		{% block header %}
 			
@@ -23,7 +38,7 @@
 		{% endblock header %}
 		</header><!-- /header -->
 
-		<div id="container">
+		<div class="container">
 		{% block container %}
 			
 		{% endblock container %}

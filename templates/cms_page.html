@@ -1,12 +1,30 @@
 {% extends "main.html" %}
 {% load cms_tags menu_tags %}
 
+{% block afterbody %}
+	{% cms_toolbar %}
+{% endblock afterbody %}
 
 {% block header %}
-	{% cms_toolbar %}
-	<ul class="nav">
-		{% show_menu %}
-	</ul>
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container">
+			<a class="brand" href="#">
+  				django-cms-bootstrap
+			</a>
+				<ul class="nav">
+					{% show_menu %}
+				</ul>
+				{% if user.is_authenticated %}
+				<ul class="nav pull-right">
+					<li id="cms_tb_toggle">
+						<a href='#'>Edit</a>
+					</li>					
+				</ul>
+				{% endif %}
+			</div>
+		</div>
+	</div>
 {% endblock header %}
 
 

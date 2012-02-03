@@ -3,5 +3,34 @@
 
 
 {% block cms_container %}
-	{% placeholder standard_page_container %}
+	<div id="standard_page_container" class="span12">
+		{% placeholder standard_page_container %}
+	</div>
+
+	{% addtoblock 'js' %}
+		<script>
+			var show_toolbar = "Show edit toolbar";
+			var hide_toolbar = "Hide edit toolbar";
+
+			$(function() {
+				$('#cms_toolbar-toggle').css('display','none');
+
+				$('#cms_tb_toggle a').text(show_toolbar);
+
+				$('#cms_tb_toggle').click(function() {
+					CMS.API.Toolbar.toggleToolbar();
+
+					if ($(this).find('a').text() === show_toolbar) {
+						$(this).find('a').text(hide_toolbar)
+					} else {
+						$(this).find('a').text(show_toolbar)
+					}
+				});
+			});
+		</script>
+	{% endaddtoblock %}
+
 {% endblock cms_container %}
+
+
+

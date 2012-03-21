@@ -30,23 +30,13 @@
 
 
 	{% addtoblock 'js' %}
+		<script src="{{STATIC_URL}}/js/cms-toolbar.js" type="text/javascript" charset="utf-8" async defer></script>
 		<script id="toolbar_integration">
-			// This scripts show an example how to integrate
-			$(function() {
+			{% if user.is_authenticated %}	//we don't need to show the button 
+											// if the user is not authenticated
+				window.enableToolbar();
 
-				$('#cms_toolbar-toggle').css('display','none');
-
-				{% if user.is_authenticated %}	//we don't need to show the button 
-												// if the user is not authenticated
-
-					var updateToggleToolbar = function() {
-						CMS.API.Toolbar.toggleToolbar();
-					};
-
-					$('#cms_tb_toggle').click(updateToggleToolbar);
-
-				{% endif %}
-			});
+			{% endif %}			
 		</script>
 	{% endaddtoblock %}
 {% endblock header %}

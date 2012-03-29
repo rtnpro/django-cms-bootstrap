@@ -6,7 +6,6 @@ This project contains fully working and integrated version of Django CMS to enab
 # What's included?
 
 1. Twitter Bootstrap - collection of styles and JS enabling fast start with web sites
-2. Less - CSS extension language
 4. Backbone.js - JS MVC library
 5. Underscore.js - JS functional programming library
 6. Handlebars.js - JS templating library
@@ -17,11 +16,10 @@ This project contains fully working and integrated version of Django CMS to enab
 
 1. You nees to run setup.sh to create virtualenv and install dependencies.
 2. Create databse schema:
-[code]
-cd src
-./manage.py syncdb --all
- ./manage.py migrate --fake
-[/code]
+
+    cd src
+    ./manage.py syncdb --all
+    ./manage.py migrate --fake
 
 # What's next?
 

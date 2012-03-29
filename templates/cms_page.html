@@ -29,16 +29,6 @@
 	</div>
 
 
-	{% addtoblock 'js' %}
-		<script src="{{STATIC_URL}}/js/cms-toolbar.js" type="text/javascript" charset="utf-8" async defer></script>
-		<script id="toolbar_integration">
-			{% if user.is_authenticated %}	//we don't need to show the button 
-											// if the user is not authenticated
-				window.enableToolbar();
-
-			{% endif %}			
-		</script>
-	{% endaddtoblock %}
 {% endblock header %}
 
 

@@ -2,3 +2,7 @@ temp
 *.pyc
 /.codeintel
 .DS_Store
+
+/.idea/
+
+/site/

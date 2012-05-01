@@ -1,11 +1,11 @@
 #!/bin/sh
 
-mkdir temp
-mkdir temp/static
-mkdir temp/media
+mkdir site
+mkdir site/static
+mkdir site/media
 
-virtualenv temp/ENV
-source temp/ENV/bin/activate
+virtualenv site/ENV
+source site/ENV/bin/activate
 
 sudo pip install REQUIREMENTS
 

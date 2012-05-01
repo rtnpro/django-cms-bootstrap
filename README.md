@@ -64,15 +64,15 @@ This project contains fully working and integrated version of Django CMS to enab
     machine. To do so I recommend to have settings_local_default.py that contains recommended local settings and create
     settings.py for each developer (excluding it from git to avoid overwriting). Here are the steps to do it:
 
-    * Edit settings_local_default.py and commit it to git.
+* Edit settings_local_default.py and commit it to git.
 
-    * Create a copy of settings_local_default.py
+* Create a copy of settings_local_default.py
 
-            cp src/settings_local_default.py src/settings.py
+        cp src/settings_local_default.py src/settings.py
 
-    * Edit src/settings.py to enable your database configuration
+* Edit src/settings.py to enable your database configuration
 
-    * Add /src/settings.py to .gitignore
+* Add /src/settings.py to .gitignore
 
     In this configuration approach you also need to make sure you are using right configuation file in production. You
     can do it by either renaming settings_production.py to settings.py during the deployment or specify
@@ -89,11 +89,14 @@ This project contains fully working and integrated version of Django CMS to enab
         ./manage.py migrate --fake
 
 
-# Some things to pay attention to
+# Some things to consider
 
 * Django root is located in the *src* subfolder
 * You must choose what approach to use for configuration files: single settings.py or multiple files to have separate
     configurations for each developer and production server.
+* You need to compile LESS files: /less/django-cms-bootstrap.less should be compiled to
+    /compiled/css-compiled/django-cms-bootstrap.css. You can also add your own LESS files and compile them as well. As
+    an alternative you can add your own styles to /less/django-cms-bootstrap.less
 
 
 # What's next?
